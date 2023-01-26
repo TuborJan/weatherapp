@@ -1,0 +1,71 @@
+.WeatherScreen {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+
+    .container {
+        .location {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 45px;
+
+            .img {
+                position: absolute;
+                max-width: 70px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .city {
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+
+            .time {
+                margin: 0 auto;
+                font-size: 1.5rem;
+            }
+        }
+
+        .temperature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 7rem;
+            letter-spacing: -5px;
+
+            span {
+                font-size: 2rem;
+                letter-spacing: 0px;
+            }
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 55px;
+        }
+
+        .weather {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            text-align: center;
+        }
+    }
+
+    .alert {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

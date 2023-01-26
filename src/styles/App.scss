@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(108deg, rgba(42, 36, 136, 1) 0%, rgba(86, 86, 162, 1) 50%, rgba(78, 178, 199, 1) 100%);
+    color: #ffffff;
+
+    .input {
+        max-width: 200px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 15px 25px;
+        background: rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+        color: #ffffff;
+    }
+}

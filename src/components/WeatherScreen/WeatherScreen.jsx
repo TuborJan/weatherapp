@@ -1,7 +1,7 @@
 import React from "react";
-import "./WeatherScreen.scss";
+import "../../styles/WeatherScreen/WeatherScreen.scss";
 
-const WeatherScreen = ({ data }) => {
+export const WeatherScreen = ({ data }) => {
   const getData = (data) => {
     let d = new Date(data * 1000);
     let hh = d.getHours();
@@ -9,19 +9,16 @@ const WeatherScreen = ({ data }) => {
     return `${hh}:${min}`;
   };
 
-  let url = "";
-
-  if (data) {
-    url = `./img/${data.weather[0].icon}.png`;
-  }
-
   return (
     <div className="WeatherScreen">
       {data ? (
         <div className="container">
           <div className="location">
             <div className="img">
-              <img src={url} alt="weaher icon" />
+              <img
+                src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+                alt="weaher icon"
+              />
             </div>
             <div className="city">{data.name}</div>
             <div className="time">{`${getData(data.dt)}`}</div>
@@ -52,5 +49,3 @@ const WeatherScreen = ({ data }) => {
     </div>
   );
 };
-
-export default WeatherScreen;
